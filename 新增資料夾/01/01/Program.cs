@@ -38,8 +38,9 @@ namespace _01
             int countO = 0;
             int count = 0;
 
-            //設變數 天蠍座O型人數
-            int countT = 0;
+            //設變數 最高、最矮
+            int min = 200;
+            int max = 0;
 
             //計算男女人數
             for ( int i = 0; i < names.Length; i++ )
@@ -125,6 +126,19 @@ namespace _01
                 }
             }
 
+            //加分
+            //找最高
+            for (int i = 0; i < height.Length; i++)
+            {
+                //去除不合理值
+                if (height[i] > 100 && height[i] < 200)
+                {
+                    if ( height[i] > max )
+                    {
+                        max = height[i];
+                    }
+                }
+            }
 
             //計算男女百分比
             double F = (double)countF / (double)names.Length * 100;
@@ -168,7 +182,9 @@ namespace _01
 
             }
 
-
+            //加分
+            //列出結果
+            Console.WriteLine ( "\n班上最高身高" + max );
 
             Console.ReadLine();
             
