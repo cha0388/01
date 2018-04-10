@@ -42,6 +42,8 @@ namespace _01
             int min = 200;
             int max = 0;
 
+
+
             //計算男女人數
             for ( int i = 0; i < names.Length; i++ )
             {
@@ -94,7 +96,6 @@ namespace _01
                         sum = sum + height[i];
                         ave = sum / names.Length;
                 }
-
             }
 
             //計算各血型人數
@@ -126,6 +127,8 @@ namespace _01
                 }
             }
 
+
+
             //加分
             //找最高
             for (int i = 0; i < height.Length; i++)
@@ -140,6 +143,21 @@ namespace _01
                 }
             }
 
+            //找最矮
+            for ( int i = 0; i < height.Length; i++ )
+            {
+                //去除不合理值
+                if ( height[i] > 100 && height[i] < 200 )
+                {
+                    if ( height[i] < min )
+                    {
+                        min = height[i];
+                    }
+                }
+            }
+
+
+
             //計算男女百分比
             double F = (double)countF / (double)names.Length * 100;
             double M = (double)countM / (double)names.Length * 100;
@@ -150,6 +168,8 @@ namespace _01
             double AB = (double) countAB/ (double) names.Length * 100;
             double O = (double) countO/ (double) names.Length * 100;
             double other = (double) count/ (double) names.Length * 100;
+
+
 
             //顯示結果
             Console.WriteLine ( "女生人數" + countF + "\n占總數比例" + F + "%" );
@@ -179,15 +199,18 @@ namespace _01
                         Console.WriteLine( names[i] );
                     }
                 }
-
             }
+
+
 
             //加分
             //列出結果
             Console.WriteLine ( "\n班上最高身高" + max );
+            Console.WriteLine ( "班上最矮身高" + min );
+
+
 
             Console.ReadLine();
-            
         }
     }
 }
