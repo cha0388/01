@@ -87,10 +87,10 @@ namespace _01
             }
 
             //計算全班身高平均
-            for (int i = 0; i < height.Length; i++)
+            for ( int i = 0; i < height.Length; i++ )
             {
                 //去除不合理值
-                if (height[i] > 100 && height[i] < 200)
+                if ( height[i] > 100 && height[i] < 200 )
                 {
                     
                         sum = sum + height[i];
@@ -131,10 +131,10 @@ namespace _01
 
             //加分
             //找最高
-            for (int i = 0; i < height.Length; i++)
+            for ( int i = 0; i < height.Length; i++ )
             {
                 //去除不合理值
-                if (height[i] > 100 && height[i] < 200)
+                if ( height[i] > 100 && height[i] < 200 )
                 {
                     if ( height[i] > max )
                     {
@@ -163,17 +163,17 @@ namespace _01
             double M = (double)countM / (double)names.Length * 100;
 
             //計算各血型百分比
-            double A = (double) countA/ (double) names.Length *100;
-            double B = (double) countB/ (double) names.Length * 100;
-            double AB = (double) countAB/ (double) names.Length * 100;
-            double O = (double) countO/ (double) names.Length * 100;
-            double other = (double) count/ (double) names.Length * 100;
+            double A = (double) countA / (double) names.Length *100;
+            double B = (double) countB / (double) names.Length * 100;
+            double AB = (double) countAB / (double) names.Length * 100;
+            double O = (double) countO / (double) names.Length * 100;
+            double other = (double) count / (double) names.Length * 100;
 
 
 
             //顯示結果
             Console.WriteLine ( "女生人數" + countF + "\n占總數比例" + F + "%" );
-            Console.WriteLine ( "男生人數" + countM + "\n占總數比例" + M + "%");
+            Console.WriteLine ( "\n男生人數" + countM + "\n占總數比例" + M + "%\n");
 
             Console.WriteLine ( "\nA型人數" + countA + "\n占總數比例" + A + "%" );
             Console.WriteLine ( "\nB型人數" + countB + "\n占總數比例" + B + "%" );
@@ -181,19 +181,19 @@ namespace _01
             Console.WriteLine ( "\nO型人數" + countO + "\n占總數比例" + O + "%" );
             Console.WriteLine ( "\n其他人數" + count + "\n占總數比例" + other + "%\n" );
 
-            Console.WriteLine ( "女生身高平均" + aveF );
+            Console.WriteLine ( "\n女生身高平均" + aveF );
             Console.WriteLine ( "男生身高平均" + aveM );
             Console.WriteLine ( "全班身高平均" + ave );
 
             //天蠍座O型
-            Console.WriteLine ( "\n天蠍座O型的人：" );
-            for (int i = 0; i < star.Length; i++)
+            Console.WriteLine ( "\n\n天蠍座O型的人：" );
+            for ( int i = 0; i < star.Length; i++ )
             {
                 //抓出天蠍座
-                if (star[i] == "天蠍")
+                if ( star[i] == "天蠍" )
                 {
                     //裡面的O型
-                    if (blood[i] == "O")
+                    if ( blood[i] == "O" )
                     {
                         //寫名單
                         Console.WriteLine( names[i] );
@@ -205,7 +205,7 @@ namespace _01
 
             //加分
             //列出結果
-            Console.WriteLine ( "\n班上最高身高" + max );
+            Console.WriteLine ( "\n\n班上最高身高" + max );
             Console.WriteLine ( "班上最矮身高" + min );
 
 
